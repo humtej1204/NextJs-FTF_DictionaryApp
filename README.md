@@ -115,19 +115,13 @@ Verify that Docker is running in Git Bash using `docker -v`.
    
    ![](https://github.com/humtej1204/FTF_Test/blob/main/assets/deploy_step_02.png)
 
-2. Now it's time to build the Docker image; we do this with the command `docker-compose build`.
-    
-   ![](https://github.com/humtej1204/FTF_Test/blob/main/assets/deploy_step_07.png)
-
+2. Now it's time to build the Docker image; we do this with the command `docker build -t dictionary-app .`.
+   
   * Wait for a few minutes for the build to complete.
-3. Once the build is finished, you just need to start the application with the command `docker-compose up`.
-    
-   ![](https://github.com/humtej1204/FTF_Test/blob/main/assets/deploy_step_08.png)
+3. Once the build is finished, you just need to start the application with the command `docker run -dp 3000:3000 dictionary-app`.
 
   * Wait for a few minutes for the application to start.
     
-   ![](https://github.com/humtej1204/FTF_Test/blob/main/assets/deploy_step_09.png)
-
-  * Access the application at
-    `http://localhost:4200/`
+  * And Finally access the application at
+    `http://localhost:3000/`
 
