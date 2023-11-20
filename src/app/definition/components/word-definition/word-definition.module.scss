@@ -1,0 +1,155 @@
+$sep-color: #1d2a57;
+$title-color: #1d2a57;
+$subtitle-color: #1d2a57;
+$text-color: #1d2a57;
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    min-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: $text-color;
+    padding: 25px 15px;
+
+    @media (min-width: 768px) {
+        padding: 35px;
+    }
+
+    @media (min-width: 1024px) {
+        padding: 50px 0;
+    }
+}
+
+.wordDefinitionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .title {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        padding-bottom: 10px;
+        border-bottom: 2px solid $sep-color;
+
+        h1 {
+            color: $title-color;
+            text-transform: capitalize;
+        }
+
+        span {
+            font-size: 1.5rem;
+        }
+    }
+
+    .wordResourcesContainer {
+        li {
+            margin-left: 20px;
+        }
+    }
+}
+
+.wordPhoneticsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .phoneticElem {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    @media (min-width: 768px) {
+        align-items: center;
+        gap: 25px;
+    }
+
+    @media (min-width: 1024px) {
+    }
+}
+
+.wordMeaningsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .wordMeaning {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border-bottom: 2px solid $sep-color;
+        padding: 20px 0;
+    }
+
+    .meaningsTable {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .definitionRow {width: 100%;}
+        .exampleRow {width: 100%;}
+        .meaningsHeader {
+            width: 100%;
+            display: flex;
+            gap: 25px;
+            padding: 10px 15px;
+            background-color: #ffe797;
+            color: #1d2a57;
+            font-size: 1rem;
+            font-weight: 900;
+
+            .exampleRow {
+                display: none;
+            }
+        }
+        .meaningsContent {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 5px 15px;
+
+            &:nth-child(2n) {
+                background-color: #fff8e4;
+            }
+            .definitionRow {
+                color: #1d2a57;
+                font-weight: 600;
+            }
+
+            .exampleRow {
+                color: #0580e8;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .meaningsTable {
+
+            .definitionRow {width: 60%;}
+            .exampleRow {width: 40%;}
+            .meaningsHeader {
+                .exampleRow {
+                    display: flex;
+                }
+            }
+            .meaningsContent {
+                flex-direction: row;
+                gap: 25px;
+            }
+        }
+    }
+}
+
+.wordRelation {
+    span:nth-child(n)::after {
+        content: ', ';
+    }
+    span:last-child::after {
+        content: none;
+    }
+}

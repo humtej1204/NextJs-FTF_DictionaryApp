@@ -1,0 +1,105 @@
+.container {
+    flex: 1;
+    width: 100vw;
+    min-width: 300px;
+    max-width: 500px;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.sidebar {
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--main-color);
+        color: white;
+        height: 80px;
+        padding: 0 15px;
+
+        strong {
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            border: none;
+            background-color: transparent;
+            width: 40px;
+            height: 40px;
+            color: white;
+
+            svg {
+                width: auto;
+                height: 25px;
+            }
+
+            &:hover {
+                background-color: rgba(#000000, 0.2);
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        padding: 0 15px;
+
+        &__nav {
+            flex: 1;
+            overflow-y: auto;
+            flex-direction: column;
+            gap: 10px;
+
+            li {
+                border-radius: 10px;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                width: 100%;
+                height: 100%;
+                padding: 15px;
+                font-size: 1.1rem;
+                font-weight: 600;
+    
+                svg {
+                    color: var(--main-color);
+                    width: auto;
+                    height: 1.5rem;
+                }
+
+                &:hover {
+                    background-color: rgba(#000000, 0.1);
+                }
+            }
+        }
+
+        &__social {
+            justify-content: center;
+            gap: 30px;
+            color: var(--main-color);
+            padding: 25px 15px;
+            border-top: var(--main-color) solid 2px;
+    
+            svg {
+                width: auto;
+                height: 30px;
+            }
+        }
+    }
+}
+
+.active {
+    background-color: rgba(#000000, 0.1);
+}
