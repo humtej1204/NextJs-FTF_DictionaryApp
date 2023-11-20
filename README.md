@@ -54,7 +54,7 @@ To download the project, it's necessary to have the GitHub application installed
    
   * If the window doesn't open automatically, search for the `Git Bash` application among your programs.
 5. Go back to the repository page:
-  https://github.com/humtej1204/FTF_Test
+  https://github.com/humtej1204/NextJs-FTF_DictionaryApp.git
   Click on the `<> Code` button and copy the path to download the project locally.
 
    ![](https://raw.githubusercontent.com/humtej1204/FTF_Test/main/assets/git_step_20.png)
